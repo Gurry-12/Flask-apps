@@ -1,0 +1,365 @@
+Folder PATH listing for volume gurii's_disk
+Volume serial number is ECE1-D1CE
+D:.
+|   .env
+|   .env.example
+|   .flaskenv
+|   config.py
+|   poetry.lock
+|   pyproject.toml
+|   run.py
+|   setup.cfg
+|   setup.py
+|   tree.txt
+|   wsgi.py
+|   
++---.vscode
+|       settings.json
+|       
++---app
+|   |   config_loader.py
+|   |   extensions.py
+|   |   logging_config.py
+|   |   __init__.py
+|   |   
+|   +---api
+|   |   |   errors.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---v1
+|   |   |   |   alerts_api.py
+|   |   |   |   community_api.py
+|   |   |   |   households_api.py
+|   |   |   |   kits_api.py
+|   |   |   |   users_api.py
+|   |   |   |   user_communities_api.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           alerts_api.cpython-312.pyc
+|   |   |           community_api.cpython-312.pyc
+|   |   |           households_api.cpython-312.pyc
+|   |   |           kits_api.cpython-312.pyc
+|   |   |           users_api.cpython-312.pyc
+|   |   |           user_communities_api.cpython-312.pyc
+|   |   |           __init__.cpython-312.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           errors.cpython-312.pyc
+|   |           __init__.cpython-312.pyc
+|   |           
+|   +---blueprints
+|   |   |   __init__.py
+|   |   |   
+|   |   +---admin
+|   |   |   |   alerts_routes.py
+|   |   |   |   analytics_routes.py
+|   |   |   |   community_routes.py
+|   |   |   |   dashboard_routes.py
+|   |   |   |   forms.py
+|   |   |   |   households_routes.py
+|   |   |   |   kits_routes.py
+|   |   |   |   reports_routes.py
+|   |   |   |   system_routes.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           alerts_routes.cpython-312.pyc
+|   |   |           analytics_routes.cpython-312.pyc
+|   |   |           community_routes.cpython-312.pyc
+|   |   |           dashboard_routes.cpython-312.pyc
+|   |   |           forms.cpython-312.pyc
+|   |   |           households_routes.cpython-312.pyc
+|   |   |           kits_routes.cpython-312.pyc
+|   |   |           reports_routes.cpython-312.pyc
+|   |   |           routes.cpython-312.pyc
+|   |   |           system_routes.cpython-312.pyc
+|   |   |           __init__.cpython-312.pyc
+|   |   |           
+|   |   +---auth
+|   |   |   |   forms.py
+|   |   |   |   oauth.py
+|   |   |   |   routes.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           forms.cpython-312.pyc
+|   |   |           routes.cpython-312.pyc
+|   |   |           __init__.cpython-312.pyc
+|   |   |           
+|   |   +---main
+|   |   |   |   routes.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           routes.cpython-312.pyc
+|   |   |           __init__.cpython-312.pyc
+|   |   |           
+|   |   +---user
+|   |   |   |   alerts_routes.py
+|   |   |   |   community_routes.py
+|   |   |   |   dashboard_routes.py
+|   |   |   |   forms.py
+|   |   |   |   households_routes.py
+|   |   |   |   kits_routes.py
+|   |   |   |   profile_routes.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           alerts_routes.cpython-312.pyc
+|   |   |           community_routes.cpython-312.pyc
+|   |   |           dashboard_routes.cpython-312.pyc
+|   |   |           forms.cpython-312.pyc
+|   |   |           households_routes.cpython-312.pyc
+|   |   |           kits_routes.cpython-312.pyc
+|   |   |           profile_routes.cpython-312.pyc
+|   |   |           routes.cpython-312.pyc
+|   |   |           __init__.cpython-312.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           __init__.cpython-312.pyc
+|   |           
+|   +---cli
+|   |       commands.py
+|   |       __init__.py
+|   |       
+|   +---models
+|   |   |   alert.py
+|   |   |   community.py
+|   |   |   household.py
+|   |   |   kit.py
+|   |   |   user.py
+|   |   |   user_community.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           alert.cpython-312.pyc
+|   |           community.cpython-312.pyc
+|   |           household.cpython-312.pyc
+|   |           kit.cpython-312.pyc
+|   |           user.cpython-312.pyc
+|   |           user_community.cpython-312.pyc
+|   |           __init__.cpython-312.pyc
+|   |           
+|   +---repositories
+|   |       alert_repo.py
+|   |       base_repo.py
+|   |       community_repo.py
+|   |       household_repo.py
+|   |       kit_repo.py
+|   |       user_repo.py
+|   |       __init__.py
+|   |       
+|   +---schemas
+|   |   |   alert_schema.py
+|   |   |   community_schema.py
+|   |   |   household_schema.py
+|   |   |   kit_schema.py
+|   |   |   user_community_schema.py
+|   |   |   user_schema.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           alert_schema.cpython-312.pyc
+|   |           community_schema.cpython-312.pyc
+|   |           household_schema.cpython-312.pyc
+|   |           kit_schema.cpython-312.pyc
+|   |           user_community_schema.cpython-312.pyc
+|   |           user_schema.cpython-312.pyc
+|   |           __init__.cpython-312.pyc
+|   |           
+|   +---security
+|   |   |   decorators.py
+|   |   |   hashing.py
+|   |   |   policies.py
+|   |   |   tokens.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           decorators.cpython-312.pyc
+|   |           hashing.cpython-312.pyc
+|   |           __init__.cpython-312.pyc
+|   |           
+|   +---services
+|   |   |   alert_service.py
+|   |   |   analytics_service.py
+|   |   |   auth_service.py
+|   |   |   community_service.py
+|   |   |   household_service.py
+|   |   |   kit_service.py
+|   |   |   notification_service.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           alert_service.cpython-312.pyc
+|   |           community_service.cpython-312.pyc
+|   |           household_service.cpython-312.pyc
+|   |           kit_service.cpython-312.pyc
+|   |           __init__.cpython-312.pyc
+|   |           
+|   +---static
+|   |   +---css
+|   |   |   |   base.css
+|   |   |   |   
+|   |   |   +---admin
+|   |   |   |       admin.css
+|   |   |   |       analytics.css
+|   |   |   |       
+|   |   |   \---user
+|   |   |           alerts.css
+|   |   |           community.css
+|   |   |           dashboard.css
+|   |   |           household.css
+|   |   |           kit_customizer.css
+|   |   |           profile.css
+|   |   |           reports.css
+|   |   |           settings.css
+|   |   |           
+|   |   +---img
+|   |   \---js
+|   |       |   main.js
+|   |       |   
+|   |       +---admin
+|   |       |       admin.js
+|   |       |       analytics.js
+|   |       |       
+|   |       \---user
+|   |               alerts.js
+|   |               community.js
+|   |               dashboard.js
+|   |               kit_customizer.js
+|   |               profile.js
+|   |               settings.js
+|   |               
+|   +---tasks
+|   |       generate_reports.py
+|   |       pull_external_alerts.py
+|   |       send_email.py
+|   |       __init__.py
+|   |       
+|   +---templates
+|   |   |   base.html
+|   |   |   landing.html
+|   |   |   
+|   |   +---admin
+|   |   |       activity_logs.html
+|   |   |       analytics.html
+|   |   |       community_moderation.html
+|   |   |       dashboard.html
+|   |   |       manage_drills.html
+|   |   |       manage_kits.html
+|   |   |       manage_users.html
+|   |   |       reports.html
+|   |   |       system.html
+|   |   |       users.html
+|   |   |       
+|   |   +---auth
+|   |   |       forgot_password.html
+|   |   |       login.html
+|   |   |       reset_password.html
+|   |   |       signup.html
+|   |   |       verify_email.html
+|   |   |       
+|   |   +---errors
+|   |   |       403.html
+|   |   |       404.html
+|   |   |       500.html
+|   |   |       
+|   |   \---user
+|   |           alerts.html
+|   |           communities.html
+|   |           dashboard.html
+|   |           history.html
+|   |           household.html
+|   |           kit.html
+|   |           knowledge_center.html
+|   |           notifications.html
+|   |           profile.html
+|   |           reports.html
+|   |           resources.html
+|   |           settings.html
+|   |           
+|   \---__pycache__
+|           config_loader.cpython-312.pyc
+|           extensions.cpython-312.pyc
+|           logging_config.cpython-312.pyc
+|           __init__.cpython-312.pyc
+|           
++---compose
+|       .env.docker
+|       docker-compose.yml
+|       
++---docker
+|       Dockerfile
+|       Dockerfile.dev
+|       entrypoint.sh
+|       gunicorn.conf.py
+|       
++---docs
+|   |   api_spec.yaml
+|   |   architecture.md
+|   |   
+|   \---diagrams
+|           db_schema.png
+|           system.png
+|           
++---instance
+|       crisis_connect.db
+|       
++---logs
+|       app.log
+|       app.log.1
+|       app.log.4
+|       error.log
+|       gunicorn.log
+|       
++---migrations
+|   |   alembic.ini
+|   |   env.py
+|   |   README
+|   |   script.py.mako
+|   |   
+|   +---versions
+|   |   |   352b787de6c3_add_role_column_to_users.py
+|   |   |   496ffcc4857b_add_all_models_and_user_communities.py
+|   |   |   85e2ed80844d_new_models.py
+|   |   |   86c457b40496_initial_migration.py
+|   |   |   
+|   |   \---__pycache__
+|   |           352b787de6c3_add_role_column_to_users.cpython-312.pyc
+|   |           496ffcc4857b_add_all_models_and_user_communities.cpython-312.pyc
+|   |           85e2ed80844d_new_models.cpython-312.pyc
+|   |           86c457b40496_initial_migration.cpython-312.pyc
+|   |           
+|   \---__pycache__
+|           env.cpython-312.pyc
+|           
++---scripts
+|   |   backup_db.py
+|   |   create_admin.py
+|   |   restore_db.py
+|   |   seed_data.py
+|   |   
+|   \---__pycache__
+|           create_admin.cpython-312.pyc
+|           
++---tests
+|   |   conftest.py
+|   |   factories.py
+|   |   
+|   +---e2e
+|   |       test_user_journey.py
+|   |       
+|   +---integration
+|   |       test_alerts_flow.py
+|   |       test_auth_flow.py
+|   |       
+|   \---unit
+|           test_models.py
+|           test_security.py
+|           test_services.py
+|           
+\---__pycache__
+        config.cpython-312.pyc
+        run.cpython-312.pyc
+        

@@ -1,0 +1,20 @@
+/* User Profile & Settings */
+.profile-card {
+  background-color: var(--color-soft-lavender);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+}
+
+.profile-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--color-dusky-blue);
+}
+
+.profile-card input, .profile-card select {
+  margin-bottom: 0.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-warm-gray);
+  padding: 0.4rem;
+}

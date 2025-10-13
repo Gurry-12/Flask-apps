@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<h1>Profile Settings</h1>
+<div class="profile-card card">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <label>{{ form.name.label }}</label>
+        {{ form.name(class="input-field") }}
+
+        <label>{{ form.email.label }}</label>
+        {{ form.email(class="input-field") }}
+
+        <label>{{ form.password.label }}</label>
+        {{ form.password(class="input-field") }}
+        <button type="button" id="toggle-password">Show</button>
+
+        <button type="submit" class="button button-primary">Save Changes</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 class="card-header">User Dashboard</h1>
+
+  <div
+    class="grid"
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    "
+  >
+    <!-- Alerts Section -->
+    <section>
+      <h2 class="card-header">Your Alerts</h2>
+      {% if alerts %}
+      <div class="space-y-3">
+        {% for alert in alerts %}
+        <div class="card">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <h3 class="card-header">{{ alert.title }}</h3>
+            <span class="alert alert-{{ alert.severity | lower }}"
+              >{{ alert.severity }}</span
+            >
+          </div>
+          <p class="card-body">{{ alert.description }}</p>
+          <p
+            class="card-body"
+            style="font-size: 0.85rem; color: var(--color-slate-gray)"
+          >
+            Created: {{ alert.created_at }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-secondary">No alerts found.</p>
+      {% endif %}
+    </section>
+
+    <!-- Households Section -->
+    <section>
+      <h2 class="card-header">Your Households</h2>
+      {% if households %}
+      <div class="space-y-3">
+        {% for household in households %}
+        <div class="card">
+          <h3 class="card-header">{{ household.name }}</h3>
+          <p class="card-body">Address: {{ household.address }}</p>
+          <p
+            class="card-body"
+            style="font-size: 0.85rem; color: var(--color-slate-gray)"
+          >
+            Created: {{ household.created_at }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-secondary">No households found.</p>
+      {% endif %}
+    </section>
+
+    <!-- Kits Section -->
+    <section>
+      <h2 class="card-header">Your Kits</h2>
+      {% if kits %}
+      <div class="space-y-3">
+        {% for kit in kits %}
+        <div class="card">
+          <h3 class="card-header">{{ kit.name }}</h3>
+          <p class="card-body">Description: {{ kit.description }}</p>
+          <p
+            class="card-body"
+            style="font-size: 0.85rem; color: var(--color-slate-gray)"
+          >
+            Household ID: {{ kit.household_id }}
+          </p>
+          <p
+            class="card-body"
+            style="font-size: 0.85rem; color: var(--color-slate-gray)"
+          >
+            Created: {{ kit.created_at }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-secondary">No kits found.</p>
+      {% endif %}
+    </section>
+
+    <!-- Communities Section -->
+    <section>
+      <h2 class="card-header">Your Communities</h2>
+      {% if communities %}
+      <div class="space-y-3">
+        {% for community in communities %}
+        <div class="card">
+          <h3 class="card-header">{{ community.name }}</h3>
+          <p class="card-body">Description: {{ community.description }}</p>
+          <p
+            class="card-body"
+            style="font-size: 0.85rem; color: var(--color-slate-gray)"
+          >
+            Created: {{ community.created_at }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="text-secondary">No communities found.</p>
+      {% endif %}
+    </section>
+  </div>
+</div>
+{% endblock %}

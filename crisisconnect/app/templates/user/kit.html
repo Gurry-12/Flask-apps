@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-6">Your Kits</h1>
+  {% if kits %}
+  <div class="space-y-3">
+    {% for kit in kits %}
+    <div class="bg-white shadow rounded p-4">
+      <h3 class="font-bold text-lg">{{ kit.name }}</h3>
+      <p class="mt-1 text-gray-700">Description: {{ kit.description }}</p>
+      <p class="mt-2 text-sm text-gray-500">
+        Household ID: {{ kit.household_id }}
+      </p>
+      <p class="mt-2 text-sm text-gray-500">Created: {{ kit.created_at }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="text-gray-600">No kits found.</p>
+  {% endif %}
+  <a
+    href="{{ url_for('user.user_dashboard.index') }}"
+    class="bg-blue-600 text-white px-4 py-2 rounded inline-block mt-4"
+    >Back to Dashboard</a
+  >
+</div>
+{% endblock %}

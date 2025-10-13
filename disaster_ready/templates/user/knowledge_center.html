@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}Knowledge Center{% endblock %} {%
+block content %}
+<h1>Knowledge Center</h1>
+
+<div class="knowledge-articles">
+  {% for article in articles %}
+  <div class="knowledge-card card">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.summary }}</p>
+    <a
+      href="{{ url_for('knowledge_detail', id=article.id) }}"
+      class="button button-primary"
+      >Read More</a
+    >
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

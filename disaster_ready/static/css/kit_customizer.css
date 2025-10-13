@@ -1,0 +1,28 @@
+/* Disaster Kit Customizer Page */
+.kit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-powder-blue);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.kit-item:hover {
+  background-color: var(--color-dusty-blue);
+  color: #fff;
+}
+
+.kit-add-btn {
+  background-color: var(--color-success);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.kit-add-btn:hover {
+  background-color: var(--color-mint-green);
+}

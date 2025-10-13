@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-6">System Management</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white shadow rounded p-4">
+      <h3 class="font-semibold mb-2">Backup</h3>
+      <p class="text-gray-600 mb-3">Create or restore backups.</p>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded">Run Backup</button>
+    </div>
+    <div class="bg-white shadow rounded p-4">
+      <h3 class="font-semibold mb-2">Logs</h3>
+      <p class="text-gray-600 mb-3">View and rotate logs.</p>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded">View Logs</button>
+    </div>
+  </div>
+  <a href="{{ url_for('admin.admin_dashboard.index') }}" class="bg-blue-600 text-white px-4 py-2 rounded inline-block mt-6">Back to Dashboard</a>
+</div>
+{% endblock %}

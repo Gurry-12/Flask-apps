@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %}Admin Alerts{% endblock %} {% block
+extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/admin_alerts.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>Admin - Manage Alerts</h1>
+
+<a href="{{ url_for('alert.create_system_alert') }}" class="btn btn-primary"
+  >+ Create System Alert</a
+>
+
+<table class="alerts-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Severity</th>
+      <th>Date</th>
+      <th>User</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for alert in alerts %}
+    <tr>
+      <td>{{ alert.id }}</td>
+      <td>{{ alert.title }}</td>
+      <td>{{ alert.severity }}</td>
+      <td>{{ alert.date }}</td>
+      <td>{{ alert.user.name }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

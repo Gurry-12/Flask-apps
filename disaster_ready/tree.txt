@@ -1,0 +1,141 @@
+Folder PATH listing for volume gurii's_disk
+Volume serial number is ECE1-D1CE
+D:.
+|   app.py
+|   config.py
+|   decorators.py
+|   forms.py
+|   models.py
+|   README.md
+|   requirements.txt
+|   run.py
+|   tree.txt
+|   utils.py
+|   
++---docs
+|       api_docs.md
+|       ERD.png
+|       
++---instance
+|       disaster_ready.db
+|       
++---migrations
+|   |   alembic.ini
+|   |   env.py
+|   |   README
+|   |   script.py.mako
+|   |   
+|   +---versions
+|   |   |   85dfe65b92fb_initial_migration.py
+|   |   |   
+|   |   \---__pycache__
+|   |           85dfe65b92fb_initial_migration.cpython-312.pyc
+|   |           
+|   \---__pycache__
+|           env.cpython-312.pyc
+|           
++---routes
+|   |   alert_routes.py
+|   |   api_routes.py
+|   |   auth_routes.py
+|   |   community_routes.py
+|   |   dashboard_routes.py
+|   |   household_routes.py
+|   |   kit_routes.py
+|   |   main_routes.py
+|   |   
+|   \---__pycache__
+|           alert_routes.cpython-312.pyc
+|           api_routes.cpython-312.pyc
+|           auth_routes.cpython-312.pyc
+|           community_routes.cpython-312.pyc
+|           dashboard_routes.cpython-312.pyc
+|           household_routes.cpython-312.pyc
+|           kit_routes.cpython-312.pyc
+|           main_routes.cpython-312.pyc
+|           
++---services
+|   |   alert_service.py
+|   |   analytics_service.py
+|   |   community_service.py
+|   |   drill_service.py
+|   |   kit_service.py
+|   |   notification_service.py
+|   |   
+|   \---__pycache__
+|           alert_service.cpython-312.pyc
+|           analytics_service.cpython-312.pyc
+|           community_service.cpython-312.pyc
+|           kit_service.cpython-312.pyc
+|           notification_service.cpython-312.pyc
+|           
++---static
+|   +---css
+|   |       alerts.css
+|   |       base.css
+|   |       community.css
+|   |       dashboard.css
+|   |       household.css
+|   |       kit_customizer.css
+|   |       profile.css
+|   |       reports.css
+|   |       
+|   +---images
+|   \---js
+|           alerts.js
+|           community.js
+|           dashboard.js
+|           kit_customizer.js
+|           main.js
+|           profile.js
+|           
++---templates
+|   |   base.html
+|   |   landing.html
+|   |   profile.html
+|   |   
+|   +---admin
+|   |       activity_logs.html
+|   |       admin_alerts.html
+|   |       admin_dashboard.html
+|   |       analytics.html
+|   |       community_moderation.html
+|   |       manage_drills.html
+|   |       manage_kits.html
+|   |       manage_users.html
+|   |       reports.html
+|   |       system_settings.html
+|   |       
+|   +---auth
+|   |       forgot_password.html
+|   |       login.html
+|   |       reset_password.html
+|   |       signup.html
+|   |       verify_email.html
+|   |       
+|   \---user
+|           alerts.html
+|           community.html
+|           dashboard.html
+|           history.html
+|           household.html
+|           kit_customizer.html
+|           knowledge_center.html
+|           notifications.html
+|           reports.html
+|           resources.html
+|           settings.html
+|           
++---tests
+|       test_models.py
+|       test_routes.py
+|       test_services.py
+|       
+\---__pycache__
+        app.cpython-312.pyc
+        config.cpython-312.pyc
+        decorators.cpython-312.pyc
+        forms.cpython-312.pyc
+        models.cpython-312.pyc
+        run.cpython-312.pyc
+        

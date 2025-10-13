@@ -1,0 +1,89 @@
+{% extends "base.html" %} {% block title %}Welcome | CrisisConnect{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section
+  class="card text-center"
+  style="
+    background-color: var(--color-dusky-blue);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+  "
+>
+  <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem">
+    Welcome to CrisisConnect
+  </h1>
+  <p
+    style="
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    "
+  >
+    Stay prepared, stay connected. Tools for households, communities, and
+    emergency responders.
+  </p>
+  <div>
+    <a
+      href="{{ url_for('auth.signup') }}"
+      class="button button-primary"
+      style="margin-right: 1rem"
+      >Get Started</a
+    >
+    <a href="{{ url_for('auth.login') }}" class="button button-secondary"
+      >Login</a
+    >
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="container" style="padding: 4rem 2rem; text-align: center">
+  <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 3rem">
+    Why CrisisConnect?
+  </h2>
+  <div
+    style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center"
+  >
+    <!-- Feature 1 -->
+    <div
+      class="card"
+      style="flex: 1 1 250px; max-width: 300px; padding: 2rem; transition: 0.3s"
+    >
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem">
+        Real-Time Alerts
+      </h3>
+      <p style="color: var(--color-charcoal-gray)">
+        Receive critical disaster alerts instantly to keep your family safe.
+      </p>
+    </div>
+    <!-- Feature 2 -->
+    <div
+      class="card"
+      style="flex: 1 1 250px; max-width: 300px; padding: 2rem; transition: 0.3s"
+    >
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem">
+        Preparedness Kits
+      </h3>
+      <p style="color: var(--color-charcoal-gray)">
+        Organize and track household kits for emergencies with ease.
+      </p>
+    </div>
+    <!-- Feature 3 -->
+    <div
+      class="card"
+      style="flex: 1 1 250px; max-width: 300px; padding: 2rem; transition: 0.3s"
+    >
+      <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem">
+        Community Support
+      </h3>
+      <p style="color: var(--color-charcoal-gray)">
+        Connect with your community and coordinate response efforts.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

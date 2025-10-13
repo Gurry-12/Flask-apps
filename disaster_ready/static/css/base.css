@@ -1,0 +1,334 @@
+/* =======================================
+   ROOT VARIABLES: COLORS, TYPOGRAPHY, SHADOWS
+======================================= */
+:root {
+  /* Primary & Core Colors */
+  --color-olive-green: #a3b18a;
+  --color-olive-dust: #c0c59b;
+  --color-powder-blue: #bfd7ea;
+  --color-dusty-blue: #a9bcd0;
+  --color-dusky-blue: #6d7f9a;
+  --color-lavender-gray: #c1c6d1;
+  --color-soft-lavender: #d8c3ec;
+  --color-soft-beige: #f5f3e7;
+  --color-warm-gray: #d6d6d6;
+  --color-charcoal-gray: #333333;
+  --color-light-gray: #e0e0e0;
+  --color-slate-gray: #9aa0a6;
+
+  /* Alerts & Status */
+  --color-alert-high: #f28d8d;
+  --color-alert-medium: #f2b880;
+  --color-alert-low: #83c5be;
+  --color-success: #a3c9a8;
+  --color-info: #bfd7ea;
+  --color-warning: #fff1b6;
+  --color-danger: #e07a5f;
+
+  /* Accent Colors */
+  --color-dusky-pink: #f4b6c2;
+  --color-peach-poudre: #fad2b0;
+  --color-mint-green: #d3e4cd;
+  --color-lavender-powder: #e6d9f0;
+  --color-pale-coral: #f8c8c8;
+  --color-powder-yellow: #fff5ba;
+  --color-soft-teal: #83c5be;
+  --color-rose-tint: #f7d6d0;
+  --color-misty-rose: #ffe4e1;
+  --color-olive-mist: #d9e2c8;
+  --color-dusky-peach: #f5d0b3;
+  --color-sage-light: #c7d4b6;
+
+  /* Typography */
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  /* Borders & Shadows */
+  --border-radius: 8px;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  /* Generate subtle HSL colors for 1000+ variants (programmatically suggested) */
+  /* Example for blue shades */
+  --blue-10: hsl(200, 10%, 90%);
+  --blue-20: hsl(200, 15%, 85%);
+  --blue-30: hsl(200, 20%, 80%);
+  --blue-40: hsl(200, 25%, 75%);
+  --blue-50: hsl(200, 30%, 70%);
+  --blue-60: hsl(200, 35%, 65%);
+  --blue-70: hsl(200, 40%, 60%);
+  --blue-80: hsl(200, 45%, 55%);
+  --blue-90: hsl(200, 50%, 50%);
+  /* Similarly, generate green, pink, lavender, olive, peach, yellow, gray shades */
+}
+
+/* =======================================
+   BASE STYLES
+======================================= */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-charcoal-gray);
+  background-color: var(--color-soft-beige);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-dusky-blue);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-dusty-blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-charcoal-gray);
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* =======================================
+   BUTTONS
+======================================= */
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button-primary {
+  background-color: var(--color-dusky-blue);
+  color: #fff;
+}
+.button-primary:hover {
+  background-color: var(--color-dusty-blue);
+}
+
+.button-secondary {
+  background-color: var(--color-powder-blue);
+  color: var(--color-charcoal-gray);
+}
+.button-secondary:hover {
+  background-color: var(--color-dusty-blue);
+  color: #fff;
+}
+
+.button-success {
+  background-color: var(--color-success);
+  color: #fff;
+}
+.button-success:hover {
+  background-color: var(--color-mint-green);
+}
+
+.button-danger {
+  background-color: var(--color-alert-high);
+  color: #fff;
+}
+.button-danger:hover {
+  background-color: #e07a5fcc;
+}
+
+/* =======================================
+   CARDS
+======================================= */
+.card {
+  background-color: var(--color-lavender-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card-header {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-body {
+  font-size: 0.95rem;
+}
+
+/* =======================================
+   ALERTS
+======================================= */
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+.alert-high {
+  background-color: var(--color-alert-high);
+}
+.alert-medium {
+  background-color: var(--color-alert-medium);
+}
+.alert-low {
+  background-color: var(--color-alert-low);
+}
+.alert-success {
+  background-color: var(--color-success);
+  color: #fff;
+}
+.alert-info {
+  background-color: var(--color-info);
+  color: #333;
+}
+
+/* =======================================
+   FORMS & INPUTS
+======================================= */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-warm-gray);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  color: var(--color-charcoal-gray);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-dusky-blue);
+  outline: none;
+  box-shadow: 0 0 5px var(--color-powder-blue);
+}
+
+/* =======================================
+   PROGRESS BARS / DASHBOARD
+======================================= */
+.progress-container {
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  height: 20px;
+}
+.progress-bar {
+  height: 100%;
+  border-radius: var(--border-radius);
+  transition: width 0.3s ease;
+}
+.progress-earthquake {
+  background-color: var(--color-alert-medium);
+}
+.progress-flood {
+  background-color: var(--color-powder-blue);
+}
+.progress-storm {
+  background-color: var(--color-soft-lavender);
+}
+.progress-success {
+  background-color: var(--color-success);
+}
+.progress-info {
+  background-color: var(--color-info);
+}
+
+/* =======================================
+   TABLES
+======================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-warm-gray);
+}
+th {
+  background-color: var(--color-lavender-gray);
+  font-weight: 600;
+}
+
+/* =======================================
+   UTILITY CLASSES
+======================================= */
+.text-primary {
+  color: var(--color-dusky-blue);
+}
+.text-secondary {
+  color: var(--color-dusty-blue);
+}
+.text-success {
+  color: var(--color-success);
+}
+.text-danger {
+  color: var(--color-alert-high);
+}
+.bg-primary {
+  background-color: var(--color-dusky-blue);
+}
+.bg-secondary {
+  background-color: var(--color-dusty-blue);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-danger {
+  background-color: var(--color-alert-high);
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .card {
+    padding: 0.75rem;
+  }
+  .button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

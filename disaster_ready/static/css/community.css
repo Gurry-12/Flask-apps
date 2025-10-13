@@ -1,0 +1,36 @@
+/* Community tips & sharing */
+.community-post {
+  background-color: var(--color-soft-beige);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.community-post h5 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-dusky-blue);
+}
+.community-post p {
+  margin: 0;
+  color: var(--color-charcoal-gray);
+}
+.community-post .like-btn,
+.community-post .share-btn {
+  background-color: var(--color-powder-blue);
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin-right: 0.3rem;
+}
+.community-post .like-btn:hover,
+.community-post .share-btn:hover {
+  background-color: var(--color-dusty-blue);
+  color: #fff;
+}
+.community-post .like-btn {
+  color: var(--color-charcoal-gray);
+}
+.community-post .share-btn {
+  color: var(--color-charcoal-gray);
+}

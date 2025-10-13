@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}CrisisConnect{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/base.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: var(--color-dusky-blue)"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="{{
+          url_for('user.user_dashboard.index') if current_user.is_authenticated and current_user.role == 'user'
+          else url_for('admin.admin_dashboard.index') if current_user.is_authenticated
+          else url_for('main.index')
+        }}"
+          >CrisisConnect</a
+        >
+
+        <div class="collapse navbar-collapse show">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            {% if current_user.is_authenticated %} {% if current_user.role ==
+            'user' %}
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'user.user_alerts.alerts' %}active{% endif %}"
+                href="{{ url_for('user.user_alerts.alerts') }}"
+                >Alerts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'user.user_households.households' %}active{% endif %}"
+                href="{{ url_for('user.user_households.households') }}"
+                >Households</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'user.user_kits.kits' %}active{% endif %}"
+                href="{{ url_for('user.user_kits.kits') }}"
+                >Kits</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'user.user_community.communities' %}active{% endif %}"
+                href="{{ url_for('user.user_community.communities') }}"
+                >Communities</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'user.user_profile.profile' %}active{% endif %}"
+                href="{{ url_for('user.user_profile.profile') }}"
+                >Profile</a
+              >
+            </li>
+
+            {% elif current_user.role == 'admin' %}
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'admin.admin_alerts.create_alert' %}active{% endif %}"
+                href="{{ url_for('admin.admin_alerts.create_alert') }}"
+                >Alerts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'admin.admin_households.create_household' %}active{% endif %}"
+                href="{{ url_for('admin.admin_households.create_household') }}"
+                >Households</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'admin.admin_kits.create_kit' %}active{% endif %}"
+                href="{{ url_for('admin.admin_kits.create_kit') }}"
+                >Kits</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'admin.admin_community.create_community' %}active{% endif %}"
+                href="{{ url_for('admin.admin_community.create_community') }}"
+                >Communities</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'admin.admin_reports.reports' %}active{% endif %}"
+                href="{{ url_for('admin.admin_reports.reports') }}"
+                >Reports</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'admin.admin_analytics.analytics' %}active{% endif %}"
+                href="{{ url_for('admin.admin_analytics.analytics') }}"
+                >Analytics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.endpoint == 'admin.admin_system.system' %}active{% endif %}"
+                href="{{ url_for('admin.admin_system.system') }}"
+                >System</a
+              >
+            </li>
+            {% endif %}
+
+            <li class="nav-item">
+              <a
+                class="btn button-danger ms-2"
+                href="{{ url_for('auth.logout') }}"
+                >Logout</a
+              >
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a
+                class="btn button-primary me-2 {% if request.endpoint == 'auth.login' %}active{% endif %}"
+                href="{{ url_for('auth.login') }}"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn button-primary me-2 {% if request.endpoint == 'auth.signup' %}active{% endif %}"
+                href="{{ url_for('auth.signup') }}"
+                >Sign Up</a
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Flash messages -->
+    <div class="container mt-3">
+      <span class="me-3">
+        Welcome, {{ current_user.username if current_user.is_authenticated else
+        'Guest' }}
+      </span>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white mt-4 p-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <p>
+          &copy; {{ current_year|default(2025) }} CrisisConnect. All rights
+          reserved.
+        </p>
+        <div>
+          <a href="{{ url_for('main.index') }}" class="text-secondary">Home</a>
+          | <a href="#" class="text-secondary">About</a> |
+          <a href="#" class="text-secondary">Contact</a> |
+          <a href="{{ url_for('main.index') }}#docs" class="text-secondary"
+            >Docs</a
+          >
+        </div>
+        <span class="text-secondary">v1.0.0</span>
+      </div>
+    </footer>
+  </body>
+</html>

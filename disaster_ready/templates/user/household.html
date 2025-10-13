@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Household Management{% endblock %}
+{% block content %}
+<h1>Household Management</h1>
+
+<button id="add-household-btn" class="button button-primary">Add Household</button>
+
+<div class="household-list">
+    {% for household in households %}
+    <div class="household-card card">
+        <h4>{{ household.name }}</h4>
+        <p>Members: {{ household.members_count }}</p>
+        <p>Pets: {{ household.pets_count }}</p>
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

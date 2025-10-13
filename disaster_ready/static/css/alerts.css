@@ -1,0 +1,27 @@
+/* Alerts and Notifications Page */
+.alert-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+.alert-card.high {
+  background-color: var(--color-alert-high);
+}
+.alert-card.medium {
+  background-color: var(--color-alert-medium);
+}
+.alert-card.low {
+  background-color: var(--color-alert-low);
+}
+
+.alert-card button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}

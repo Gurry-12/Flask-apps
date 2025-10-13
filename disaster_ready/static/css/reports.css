@@ -1,0 +1,22 @@
+/* Reports & Analytics Page */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.report-table th,
+.report-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-warm-gray);
+}
+.report-table th {
+  background-color: var(--color-lavender-gray);
+  font-weight: 600;
+}
+
+.report-chart-container {
+  background-color: var(--color-soft-beige);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}

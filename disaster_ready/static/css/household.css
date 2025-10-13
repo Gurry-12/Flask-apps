@@ -1,0 +1,26 @@
+/* Household management page */
+.household-card {
+  background-color: var(--color-olive-mist);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.household-card h4 {
+  margin: 0;
+  font-weight: 600;
+}
+.household-card .edit-btn {
+  background-color: var(--color-powder-blue);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+.household-card .edit-btn:hover {
+  background-color: var(--color-dusky-blue);
+  color: #fff;
+}

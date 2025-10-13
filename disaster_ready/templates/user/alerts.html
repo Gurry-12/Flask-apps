@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Alerts{% endblock %} {% block
+extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/alerts.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>Alerts & Notifications</h1>
+
+<select id="filter-alerts">
+  <option value="all">All</option>
+  <option value="high">High</option>
+  <option value="medium">Medium</option>
+  <option value="low">Low</option>
+</select>
+
+<div class="alerts-container">
+  {% for alert in alerts %}
+  <div
+    class="alert-card {{ alert.severity }}"
+    data-level="{{ alert.severity }}"
+  >
+    <div class="alert-title">{{ alert.title }}</div>
+    <div class="alert-description">{{ alert.description }}</div>
+    <div class="alert-meta">Date: {{ alert.date }}</div>
+    <a
+      href="{{ url_for('alert.mark_read', alert_id=alert.id) }}"
+      class="mark-read"
+      >Mark Read</a
+    >
+  </div>
+  {% else %}
+  <p>No new alerts 🎉</p>
+  {% endfor %}
+</div>
+{% endblock %} {% block extra_js %}
+<script src="{{ url_for('static', filename='js/alerts.js') }}"></script>
+{% endblock %}

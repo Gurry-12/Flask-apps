@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block title %}Sign Up | CrisisConnect{% endblock %}
+{% block content %}
+<div class="card" style="max-width: 400px; margin: 2rem auto; padding: 2rem">
+  <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem">
+    Sign Up
+  </h2>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %}
+  <div class="alert alert-{{ category }}" style="margin-bottom: 1rem">
+    {{ message }}
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    <div style="margin-bottom: 1rem">
+      <label>{{ form.username.label.text }}</label>
+      {{ form.username(class_="") }}
+    </div>
+
+    <div style="margin-bottom: 1rem">
+      <label>{{ form.email.label.text }}</label>
+      {{ form.email(class_="") }}
+    </div>
+
+    <div style="margin-bottom: 1rem">
+      <label>{{ form.password.label.text }}</label>
+      {{ form.password(class_="") }}
+    </div>
+
+    <div style="margin-bottom: 1rem">
+      <label>{{ form.confirm_password.label.text }}</label>
+      {{ form.confirm_password(class_="") }}
+    </div>
+
+    <div>{{ form.submit(class_="button button-primary") }}</div>
+  </form>
+
+  <p style="margin-top: 1rem; font-size: 0.875rem">
+    Already have an account?
+    <a href="{{ url_for('auth.login') }}" class="text-primary">Log in</a>
+  </p>
+</div>
+{% endblock %}

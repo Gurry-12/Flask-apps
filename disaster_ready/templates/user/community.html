@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Community{% endblock %}
+{% block content %}
+<h1>Community Tips</h1>
+
+<div class="community-posts">
+    {% for post in community_posts %}
+    <div class="community-post card">
+        <h5>{{ post.title }}</h5>
+        <p>{{ post.content }}</p>
+        <button class="like-btn" data-likes="{{ post.likes }}">👍 {{ post.likes }}</button>
+        <button class="share-btn">Share</button>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

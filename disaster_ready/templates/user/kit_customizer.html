@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Kit Customizer{% endblock %} {% block
+content %}
+<h1>Customize Your Disaster Kit</h1>
+
+<input type="text" id="kit-item-input" placeholder="Add new item..." />
+<button id="add-kit-item" class="button button-success">Add Item</button>
+
+<ul id="kit-list">
+  {% for item in kit_items %}
+  <li class="kit-item">
+    {{ item.name }} <button class="remove-btn">Remove</button>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
